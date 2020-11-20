@@ -1,0 +1,18 @@
+<div class="container">
+
+  <h1>Login</h1>
+  <form [formGroup]="myForm" (ngSubmit)='login()' >
+
+    <div class="formBlock">
+      <label> Email </label>
+      <input formControlName="email" type="text">
+    </div> 
+    
+    <div class="formBlock" >
+      <label > Password </label>
+      <input formControlName="password" type="password">
+    </div> 
+
+    <button type="submit" >Envoyer</button>
+  </form>
+</div>

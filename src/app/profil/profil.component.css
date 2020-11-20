@@ -1,0 +1,24 @@
+.container {
+  min-height: 25em;
+  padding: 2em;
+  width: 50%;
+  margin: 10em auto;
+
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formBlock {
+  margin: 4em 0;
+  font-size: 1.4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formBlock input {
+  height: 2em;
+  margin: 1.2em;
+}
