@@ -1,0 +1,21 @@
+.container {
+  height: 17em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .waveHeader {
+  height: 22em;
+  width: 94em;
+  transform: rotate(180deg);
+  position: static;
+  top: -3em;
+  z-index: 3;
+} */
+
+.title {
+  position: absolute;
+  font-size: 4em;
+}
