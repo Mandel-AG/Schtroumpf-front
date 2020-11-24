@@ -23,14 +23,12 @@ export class LoginComponent implements OnInit {
       email : new FormControl(''),
       password : new FormControl('')
     });
-    
-    // this.schtroumpfService.login().subscribe(())
   }
   
   login(){
     this.schtroumpfService.login(this.myForm.value).subscribe(()=>{
       this.router.navigate(['/home'])
-    }, err => console.log('error', err))
+    })
   }
 
 

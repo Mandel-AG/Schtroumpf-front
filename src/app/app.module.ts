@@ -40,7 +40,7 @@ const APP_ROUTE:Route[] = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(APP_ROUTE),
+    RouterModule.forRoot(APP_ROUTE,{ onSameUrlNavigation: 'reload' }),
 
   ],
   providers: [{

@@ -35,11 +35,12 @@
 <div class="home__listContainer">
   <ul  *ngIf="currentUser | async;let user;" >
     <li class="friendList__li" *ngFor='let ami of user.ami' > 
-     <p>  <span>Email : </span> {{ami.email}}  </p>
+     <p #f >  <span>Email : </span> {{ami.email}}  </p>
      <p>  <span>Age : </span> : {{ami.age}}  </p>
      <p> <span>Famille : </span> : {{ami.famille}}  </p>
      <p>  <span>Race : </span> : {{ami.race}}  </p>
      <p> <span>Nourriture : </span> : {{ami.nourriture}}  </p>
+     <button (click)="deleteFriend(f)">  Effacer</button>
     </li>
   </ul>
 

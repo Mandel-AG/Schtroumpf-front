@@ -17,9 +17,7 @@ export class ProfilComponent implements OnInit {
   constructor(private schtroumpfService: SchtroumpfService) { }
 
   ngOnInit(): void {
-    // this.schtroumpfService.getCurrentSchtroumpf().subscribe((user) =>{
-    //     console.log(user)
-    //   })
+  
       this.currentUser = this.schtroumpfService.getCurrentSchtroumpf();
   }
 

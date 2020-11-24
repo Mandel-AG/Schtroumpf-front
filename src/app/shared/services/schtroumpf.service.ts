@@ -110,23 +110,10 @@ export class SchtroumpfService {
   }
 
 
-
-  // public getCurrentSchtroumpf(): Observable<schtroumpf>{
-  //   if(this.currentSchtroumpf.value){
-  //     return this.currentSchtroumpf;
-  //   }else{
-  //     return this.http.get<schtroumpf>('/back/user/currentUser').pipe(
-  //       tap( (user:schtroumpf)=>{
-  //         this.currentSchtroumpf.next(user)
-  //       }),
-  //       switchMap( ()=>{
-  //         return this.currentSchtroumpf;
-  //       })
-  //     )
-  //   }
-  // }
-
-
+  public deleteFriend(userId, email){
+    const  URL = `http://localhost:5200/back/user/deleteFriend/${userId}/${email}`;
+    return this.http.post<any>(URL, {})
+  }
 
 
 

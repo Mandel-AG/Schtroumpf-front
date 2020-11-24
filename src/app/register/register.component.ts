@@ -16,7 +16,7 @@ export class RegisterComponent implements OnInit {
   register(){
     this.schtroumpfService.register(this.myForm.value).subscribe(() => {
       this.router.navigate(['/home'])
-    },err => console.error("ERROR",err))
+    })
   }
 
   constructor(private schtroumpfService: SchtroumpfService, private router:Router) { }
@@ -31,7 +31,6 @@ export class RegisterComponent implements OnInit {
       nourriture : new FormControl('')
     });
 
-    // this.schtroumpfService.login().subscribe(())
 
   
   }
