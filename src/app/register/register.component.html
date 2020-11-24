@@ -1,0 +1,38 @@
+<div class="container">
+
+  <h1>Register</h1>
+  <form [formGroup]="myForm" (ngSubmit)='register()' >
+
+    <div class="formBlock">
+      <label> Email </label>
+      <input formControlName="email" type="text">
+    </div> 
+    
+    <div class="formBlock" >
+      <label > Password </label>
+      <input formControlName="password" type="password">
+    </div> 
+
+    <div class="formBlock" >
+      <label > Age </label>
+      <input formControlName="age" type="text">
+    </div>
+
+    <div class="formBlock" >
+      <label > Famille </label>
+      <input formControlName="famille" type="text">
+    </div>
+
+    <div class="formBlock" >
+      <label > Race </label>
+      <input formControlName="race" type="text">
+    </div>
+
+    <div class="formBlock" >
+      <label > Nourriture </label>
+      <input formControlName="nourriture" type="text">
+    </div>
+
+    <button type="submit"> Envoyer </button>
+  </form>
+</div>

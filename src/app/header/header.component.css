@@ -6,6 +6,10 @@
   align-items: center;
 }
 
+.containerAll {
+  border: 2px solid black;
+}
+
 /* .waveHeader {
   height: 22em;
   width: 94em;

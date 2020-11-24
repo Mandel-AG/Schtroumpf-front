@@ -6,18 +6,25 @@ import { HeaderComponent } from './header/header.component';
 import { ProfilComponent } from './profil/profil.component';
 import { FriendListComponent } from './friend-list/friend-list.component';
 import { SchtroumpfService } from './shared/services/schtroumpf.service';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 import { Route, RouterModule } from '@angular/router';
-
+import { HomeComponent } from './home/home.component';
+import { AuthGuard} from './shared/guards/auth.guard';
+import { AuthInterceptors } from './shared/interceptors/auth.interceptors';
 
 
 const APP_ROUTE:Route[] = [
-  {path:"login", component:LoginComponent},
-  {path:"profil", component:ProfilComponent}
+  {path:"", component:LoginComponent},
+  {path:"profil", canActivate:[AuthGuard], component:ProfilComponent},
+  {path:"register", component:RegisterComponent},
+  {path:"home", canActivate:[AuthGuard],component:HomeComponent},
 ]
+
+
 
 
 @NgModule({
@@ -26,7 +33,9 @@ const APP_ROUTE:Route[] = [
     HeaderComponent,
     ProfilComponent,
     FriendListComponent,
-    LoginComponent
+    LoginComponent,
+    RegisterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +45,12 @@ const APP_ROUTE:Route[] = [
     RouterModule.forRoot(APP_ROUTE),
 
   ],
-  providers: [SchtroumpfService],
+  providers: [{
+    provide:HTTP_INTERCEPTORS,
+    useClass:AuthInterceptors,
+    multi:true
+  },
+  SchtroumpfService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
