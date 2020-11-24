@@ -1,5 +1,5 @@
 .container {
-  height: 17em;
+  height: 13em;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -7,17 +7,29 @@
 }
 
 .containerAll {
-  border: 2px solid black;
+  border-bottom: 1px solid black;
 }
 
-/* .waveHeader {
-  height: 22em;
-  width: 94em;
-  transform: rotate(180deg);
-  position: static;
-  top: -3em;
-  z-index: 3;
-} */
+.header__nav {
+  margin: 2em auto;
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: relative;
+}
+
+.header__nav--logout {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+.header__nav--profil,
+.header__nav--home {
+  cursor: pointer;
+  font-size: 2em;
+}
 
 .title {
   position: absolute;

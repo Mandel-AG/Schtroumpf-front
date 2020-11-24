@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
 
   addFriend(){
     
-    console.log('user id',this.userId)
     this.schtroumpfService.addFriend(this.myForm.value, this.userId)
     this.myForm.reset()
   }

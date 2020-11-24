@@ -1,0 +1,40 @@
+.home__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+
+.home__form input {
+  margin-left: 1em;
+}
+
+.home__addFriendTitle {
+  text-align: center;
+  margin: 2em;
+}
+
+.friendList__li {
+  border: 2px solid black;
+  margin: 2px;
+  font-size: 1.5em;
+
+  display: flex;
+  justify-content: space-around;
+}
+
+.friendList__li p {
+  width: 10%;
+}
+
+.friendList__li span {
+  font-size: bold;
+  color: red;
+  font-style: italic;
+}
+
+.home__listContainer {
+  overflow-y: auto;
+  height: 30vh;
+}

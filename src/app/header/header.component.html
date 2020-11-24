@@ -1,13 +1,16 @@
 <div *ngIf='jwtToken.isAuthenticated' class="containerAll">
-  <div class="container" >
+  <div class="header__infos" >
     <div class="container" *ngIf="currentUser | async;let user;" >
     <h1 class="title">Bonjour {{user.email}} </h1>
 
   </div>
-  <!-- <img class="waveHeader" src="../../assets/img/wave.svg" alt='wave' /> -->
-  <span routerLink='/profil' > Profil </span>
-  <br>
-  <span routerLink='/home' > Home </span>
-
-    <button (click)="logOut()" > Deconnection </button>
+  
+  <div class="header__nav">
+    <span class="header__nav--profil" routerLink='/profil' > Profil </span>
+    <br>
+    <span class="header__nav--home" routerLink='/home' > Home </span>
+  </div>
+  <div class="header__nav--logout">
+    <button (click)="logOut()" > Deconnection </button>    
+  </div>
 </div>

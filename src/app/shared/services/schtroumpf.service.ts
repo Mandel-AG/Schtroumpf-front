@@ -40,7 +40,6 @@ export class SchtroumpfService {
   public login(credentials:{email:string, password:string}):Observable<string>{
     return this.http.post<string>('http://localhost:5200/back/login', credentials).pipe(
       tap((token:string)=> {
-        console.log(token)
         this.jwtToken.next({
           isAuthenticated:true,
           token : token
@@ -53,9 +52,8 @@ export class SchtroumpfService {
 
 
   public addFriend(friend, id):Observable<string>{
-    console.log('ad f if',id)
-    console.log('ad f friend',friend)
-    return this.http.post<string>(`http://localhost:5200/back/user/addFriend/${id}`, {friend})
+    const URL = 'http://localhost:5200/back/user/addFriend/'+id;
+    return this.http.post<string>(URL, {friend})
   }
 
 

@@ -1,11 +1,12 @@
 <div class="container">
 
-  <h1>Profil</h1>
-  <span routerLink='/home' > Home </span>
 
-
-  <ul>
-    <li *ngFor='let infos of currentUser'> {{infos}} </li>
+  <ul class="profil__ul" *ngIf="currentUser | async;let user;">
+    <li> email : {{user.email}} </li>
+    <li> Age : {{user.age}} </li>
+    <li> Famille : {{user.famille}} </li>
+    <li> race : {{user.race}} </li>
+    <li> nourriture : {{user.nourriture}} </li>
   </ul>
    
 </div>

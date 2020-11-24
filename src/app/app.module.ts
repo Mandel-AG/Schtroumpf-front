@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ProfilComponent } from './profil/profil.component';
-import { FriendListComponent } from './friend-list/friend-list.component';
 import { SchtroumpfService } from './shared/services/schtroumpf.service';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
@@ -32,7 +31,6 @@ const APP_ROUTE:Route[] = [
     AppComponent,
     HeaderComponent,
     ProfilComponent,
-    FriendListComponent,
     LoginComponent,
     RegisterComponent,
     HomeComponent
