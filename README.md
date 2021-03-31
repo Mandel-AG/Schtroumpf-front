@@ -1,27 +1,47 @@
-# FontTestAppartoo
+<h1>Comment installer :</h1> 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.0.
+	Cloner : git clone https://github.com/Mandel-AG/Schtroumpf-front.git
+  
+ou </br>
+</br>
+Télécharger le repository</strong>
+	
+</br>
+Ensuite on installe les dépendances.
+	<em>npm install </em>
+  </br>
+	
+Enfin, on peut lancer le projet.</br>
+	<em>npm start</em>
+	
 
-## Development server
+	
+	----------------
+	
+	
+<img src="https://agb-man-portfolio.netlify.app/static/media/appartoo.3d173490.png" alt="image du site" width="250"/>
+	
+	
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+<h3>Desicrition du projet :</h3>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Carnet d'adresse.
+Réalisé en Angular 9 et Node.
+Ajouter des amis avec leur informations.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+<h3>Fonctionnalités actuelles :</h3>
 
-## Running unit tests
+Authentification, ajout et modifications d'amis...
+ 
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+-----------
 
-## Running end-to-end tests
+<h4>Infos</h4>
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Ce projet est divisé en 2 repositories : "Schtroumpf-front" et "Schtroumpf-back" (https://github.com/Mandel-AG/Social_Network_Back).
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
