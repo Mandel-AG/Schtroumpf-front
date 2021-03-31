@@ -8,9 +8,10 @@ Télécharger le repository</strong>
 	
 </br>
 Ensuite on installe les dépendances.</br>
-	<em>npm install </em>
+</br>
+<em>npm install </em></br>
   </br>
-	
+  
 Enfin, on peut lancer le projet.</br>
 </br>
 	<em>npm start</em>
